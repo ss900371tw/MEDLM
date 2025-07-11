@@ -8,7 +8,7 @@ from streamlit_chat import message
 # 讀取 API 金鑰
 load_dotenv()
 GOOGLE_API_KEY = 'AIzaSyBgMdKfVDl7MO-bE3IY2EnLc_1t7pWkoUw'
-
+genai.configure(api_key=GOOGLE_API_KEY)
 
 
 # 初始化模型（文字模型與影像模型分開）
@@ -108,3 +108,6 @@ if user_input or st.session_state.pending_images:
 
     # 清空暫存圖片
     st.session_state.pending_images = []
+
+
+
